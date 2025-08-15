@@ -96,38 +96,9 @@
     <p>&copy; 2025 Social Discovery Platform. All rights reserved.</p>
 </footer>
 
-<!-- Zendesk Chat Widget -->
-<div id="zendesk-chat" class="chat-widget" onclick="startZendeskChat()">💬</div>
-
-<script>
-    function startZendeskChat() {
-        window.ZendeskChat.start();
-    }
-</script>
-
-<!-- Zendesk Integration -->
-<script type="text/javascript">
-    window.zESettings = {
-        webWidget: {
-            chat: {
-                suppress: false,
-                trigger: {
-                    selector: '#zendesk-chat',
-                    events: ['click'],
-                }
-            }
-        }
-    };
-
-    (function() {
-        var z = document.createElement('script');
-        z.type = 'text/javascript';
-        z.async = true;
-        z.src = 'https://static.zdassets.com/ekr/snippet.js?key=9ef1c044-22a1-4cc8-bdce-e46434e12d54';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(z, s);
-    })();
-</script>
+<!-- Start of stuff-86381 Zendesk Widget script -->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=9ef1c044-22a1-4cc8-bdce-e46434e12d54"> </script>
+<!-- End of stuff-86381 Zendesk Widget script -->
 
 </body>
 </html>
