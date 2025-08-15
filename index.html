@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Discovery Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        header {
+            background-color: #3a3a3a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            padding: 40px;
+            margin: 20px;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #3a3a3a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        .cta-button {
+            background-color: #1e90ff;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: #4682b4;
+        }
+
+        .chat-widget {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: #1e90ff;
+            padding: 10px;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .chat-widget:hover {
+            background-color: #4682b4;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Social Discovery</h1>
+    <p>Connecting you to new people, ideas, and experiences</p>
+</header>
+
+<section>
+    <h2>Discover New Connections</h2>
+    <p>Explore a platform where you can find interesting individuals and content that inspire you. Whether you're looking for new friends, collaborations, or ideas, our social discovery platform has it all!</p>
+    <button class="cta-button">Join Now</button>
+</section>
+
+<section>
+    <h2>Why Social Discovery?</h2>
+    <p>Our platform offers a variety of features to help you expand your social circles and discover new, exciting content. Engage in meaningful interactions, get inspired, and share your journey with others.</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Social Discovery Platform. All rights reserved.</p>
+</footer>
+
+<!-- Zendesk Chat Widget -->
+<div id="zendesk-chat" class="chat-widget" onclick="startZendeskChat()">💬</div>
+
+<script>
+    function startZendeskChat() {
+        window.ZendeskChat.start();
+    }
+</script>
+
+<!-- Zendesk Integration -->
+<script type="text/javascript">
+    window.zESettings = {
+        webWidget: {
+            chat: {
+                suppress: false,
+                trigger: {
+                    selector: '#zendesk-chat',
+                    events: ['click'],
+                }
+            }
+        }
+    };
+
+    (function() {
+        var z = document.createElement('script');
+        z.type = 'text/javascript';
+        z.async = true;
+        z.src = 'https://static.zdassets.com/ekr/snippet.js?key=your_zendesk_key';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(z, s);
+    })();
+</script>
+
+</body>
+</html>
